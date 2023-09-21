@@ -13,8 +13,8 @@ class Calculator{
  
      }
      appendNumber(number){
-         this.currentOperand = number
- 
+         if(number === '.' && this.currentOperand.includes('.')) return;
+         this.currentOperand = this.currentOperand.tostring() + number.toString()
      }
      chooseOperation(operation){
  
